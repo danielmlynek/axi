@@ -58,13 +58,7 @@ module tb_axi_to_axi_lite;
   axi_to_axi_lite i_dut (
     .clk_i      ( clk      ),
     .rst_ni     ( rst      ),
-`ifdef _VCP // PAK2591
-    .testmode_i (ariane_pkg::ALDEC_1B0),
-
-`else
     .testmode_i ( 1'b0     ),
-
-`endif
     .in         ( axi      ),
     .out        ( axi_lite )
   );
